@@ -124,3 +124,6 @@ irb(main):005:0> Object.new.methods
 => [:instance_variable_set, :instance_variable_defined?, :remove_instance_variable, :instance_of?, :kind_of?, :is_a?, :tap, :instance_variable_get, :public_methods, :instance_variables, :method, :public_method, :define_singleton_method, :singleton_method, :public_send, :extend, :pp, :to_enum, :enum_for, :<=>, :===, :=~, :!~, :eql?, :respond_to?, :freeze, :inspect, :object_id, :send, :to_s, :display, :nil?, :hash, :class, :clone, :singleton_class, :itself, :dup, :taint, :yield_self, :untaint, :tainted?, :untrusted?, :untrust, :trust, :frozen?, :methods, :singleton_methods, :protected_methods, :private_methods, :!, :equal?, :instance_eval, :instance_exec, :==, :!=, :__id__, :__send__]
 ```
 
+Using “raise” in our attribute writer methods
+
+If the new value is invalid and the raise statement is executed, the program will halt. The statement that assigns to the instance variable will never be reached.
