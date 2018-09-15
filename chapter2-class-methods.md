@@ -105,4 +105,22 @@ An instance variable looks just like a regular variable, and follows all the sam
 @my_variable - instance variable
 my_variable - local variable
 ```
+## Encapsulation
+
+To help avoid exposing an object’s data to malicious (or clumsy) users, most object-oriented languages encourage the concept of encapsulation: preventing other parts of the program from directly accessing or changing an object’s instance variables.
+
+To encourage encapsulation and protect your instances from invalid data, Ruby doesn’t allow you to access or change instance variables from outside the class. Instead, you can create accessor methods, which will write values to the instance variables and read them back out again for you. Once you’re accessing your data through accessor methods, it’s easy to extend those methods to validate your data—to reject any bad values that get passed in.
+
+Ruby has two kinds of accessor methods: attribute writers and attribute readers. Ruby has two kinds of accessor methods: attribute writers and attribute readers.
+
+### SYMBOLS
+
+A Ruby symbol is a series of characters, like a string. Unlike a string, though, a symbol’s value can’t be changed later
+
+That makes symbols perfect for use inside Ruby programs, to refer to anything whose name doesn’t (usually) change, like a method.
+
+```
+irb(main):005:0> Object.new.methods
+=> [:instance_variable_set, :instance_variable_defined?, :remove_instance_variable, :instance_of?, :kind_of?, :is_a?, :tap, :instance_variable_get, :public_methods, :instance_variables, :method, :public_method, :define_singleton_method, :singleton_method, :public_send, :extend, :pp, :to_enum, :enum_for, :<=>, :===, :=~, :!~, :eql?, :respond_to?, :freeze, :inspect, :object_id, :send, :to_s, :display, :nil?, :hash, :class, :clone, :singleton_class, :itself, :dup, :taint, :yield_self, :untaint, :tainted?, :untrusted?, :untrust, :trust, :frozen?, :methods, :singleton_methods, :protected_methods, :private_methods, :!, :equal?, :instance_eval, :instance_exec, :==, :!=, :__id__, :__send__]
+```
 
